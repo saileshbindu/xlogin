@@ -4,19 +4,19 @@ import './App.css';
 function App() {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
-  const [showMessage, setMessage] = useState('');
+  const [error, setError] = useState('');
   const [isLogin, setIsLogin] = useState(false);
 
   const loginDetail = (event) =>{
     event.preventDefault()
     if(user === "user" && password === "password"){
-      setMessage(`Welcome ${user}`)
+      setError(`Welcome ${user}`)
       setIsLogin(true)
       setUser('');
       setPassword('');
     }
     else{
-      setMessage("Invalid username and password");
+      setError("Invalid username and password");
     
     }
     
@@ -26,7 +26,7 @@ function App() {
 
     <div className="App">
       <h1>Login Page</h1>
-      <p>{showMessage}</p>
+      <p>{error}</p>
       {isLogin ? (<div></div>) : ( <form onSubmit={loginDetail} >
         <div>
           <label>Username: </label>

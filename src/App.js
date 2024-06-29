@@ -17,8 +17,7 @@ function App() {
     }
     else{
       setMessage("Invalid username and password");
-      setUser('');
-      setPassword('');
+    
     }
     
     

@@ -9,7 +9,7 @@ function App() {
 
   const loginDetail = (event) =>{
     event.preventDefault()
-    if(user === "user" && password == "password"){
+    if(user === "user" && password === "password"){
       setMessage(`Welcome ${user}`)
       setIsLogin(true)
       setUser('');
